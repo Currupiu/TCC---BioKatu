@@ -1,0 +1,407 @@
+.fundoFoto{
+    background-image: url(../img/fundo/img-fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    overflow: scroll;
+}
+
+.pagInicial{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.logo{
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-left: 100px;
+}
+
+.logoImg{
+    width: 60px;
+    height: auto;
+}
+
+nav{
+    text-align: right;
+
+}
+
+a,p{
+    color: white;
+}
+
+.Blocotema {
+  width: 550px;
+  height: 250px;
+  background-color: #27802a;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: sans-serif;
+  gap: 10px;
+  z-index: 1;                   
+  margin: 100px 0 0 0;
+  position: relative;
+  left: -100px; /* "anula" a margem da .pagInicial */
+}
+
+.titulo {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 20px;
+  margin: 0;
+}
+
+.fim {
+  display: flex;
+  justify-content: space-between; /* empurra os dois para extremos */
+  align-items: center;
+  padding: 20px 100px; /* espaço nas laterais e vertical */
+  color: white;
+  font-family: sans-serif;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* branco transparente */
+  cursor: pointer;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between; /* Logo à esquerda, menu à direita */
+  align-items: center;
+  padding: 20px 5%;
+  flex-wrap: wrap;
+}
+
+main{
+  margin-top: 5%;
+}
+
+.molde {
+  border: black 3px solid;
+  width: 300px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0; /* apenas para visualização */
+}
+
+#molde1{
+  margin-top: 3%;
+}
+
+#molde2{
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.molde img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher o espaço */
+  display: block;
+}
+
+.alt{
+  margin-top: 50%;
+  text-align: center;
+}
+
+.DuasImgs{ 
+  background-color: rgba(30, 88, 30, 0.815);
+  justify-content: left;
+  display: flex;
+  gap: 20px;
+}
+
+.textoDuasImgs{
+  width: 50%;
+  justify-content: right;
+  text-align: justify;
+  margin-right: 2%;
+}
+
+h2, h1{
+  color: white;
+  text-align: center;
+}
+
+.fundoVerde{
+  background-color: #556b2f;
+}
+
+.TresImgs {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* espaço entre os cards */
+  margin: 20px auto;
+}
+
+.molde3 {
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: transparent; /* sem fundo cinza */
+  align-items: center;
+}
+
+.molde3 img {
+  width: 100%;
+  height: 80%;           /* imagem ocupa ~80% */
+  object-fit: cover;
+  border: 2px solid black;
+}
+
+.legenda {
+  height: 10%;           /* legenda ocupa ~20% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;          /* pra combinar com fundo verde */
+}
+
+.CincoImgs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px auto;
+}
+
+.molde5 {
+  width: 170px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  align-items: center;
+  position: relative;
+}
+
+.molde5 img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.legenda {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Estilos do Modal */
+.modal {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+/* Div que contém a imagem no modal (para aplicar o movimento) */
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  max-width: 70%;
+  max-height: 80%;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+/* Estilo da div que contém a imagem (para controle de escala) */
+.modal-image-container {
+  width: 60%;
+  position: relative;
+}
+
+/* Estilo da imagem que aparece no modal */
+#modalImage {
+  width: 100%;
+  height: auto;
+  max-width: 90%; /* Inicialmente a imagem terá um tamanho reduzido */
+  transition: transform 0.5s ease, max-width 0.5s ease;
+}
+
+/* Descrição ao lado da imagem */
+.description {
+  color: white;
+  font-size: 16px;
+  max-width: 350px; /* Tamanho da caixa de descrição */
+  margin-left: 20px;
+  text-align: justify;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-left: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Botão de fechar (X) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2; /* Garante que o 'X' fique acima de outros elementos */
+}
+
+/* Efeito de zoom da imagem */
+.zoom-img.zoomed {
+  transform: scale(2); /* Aumenta a imagem para o dobro do tamanho */
+  transition: all 0.5s ease;
+}
+
+.modal.zoomed #modalImage {
+  transform: scale(1.5); /* Faz a imagem aumentar e "caminhar" até o centro */
+  max-width: 100%; /* Aumenta a largura para preencher a div */
+}
+
+/* Efeito para a div rosa que aparece */
+.modal-content {
+  background: rgba(207, 248, 132, 0.5); /* Fundo rosa transparente */
+  position: relative;
+  max-width: 100%;
+  border-radius: 100px;
+}
+
+.modal-content.zoomed {
+  width: 50%;
+  max-width: 500px;
+  max-height: auto;
+}
+
+/* Faz o modal aparecer suavemente */
+.modal.show {
+  opacity: 1;
+}
+
+/* Fundo escuro que cobre a tela */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Caixa preta centralizada */
+.modal-box {
+  background: rgba(207, 248, 132, 0.5); /* Fundo rosa transparente */
+  width: 800px;
+  max-width: 90%;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: zoomIn 0.4s ease;
+}
+
+/* Conteúdo dentro da caixa (imagem + texto lado a lado) */
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Imagem à esquerda */
+.modal-content img {
+  width: 300px;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+/* Texto à direita */
+.modal-texto {
+  color: white;
+  font-family: Arial, sans-serif;
+  flex: 1;
+  margin-right: 2%;
+}
+
+.modal-texto h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.modal-texto p {
+  margin-top: 10px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Botão de fechar (X) */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Animação do zoom suave */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+h4{
+  text-align: justify;
+}
