@@ -99,7 +99,11 @@ a,p{
 }
 
 main{
-  margin-top: 5%;
+  margin-top: 5%;  
+}
+
+.main{
+  background-color: #27802a;
 }
 
 .molde {
@@ -109,6 +113,7 @@ main{
   position: relative;
   overflow: hidden;
   background-color: #f0f0f0; /* apenas para visualização */
+  
 }
 
 #molde1{
@@ -173,10 +178,11 @@ h2, h1{
 
 .molde3 img {
   width: 100%;
-  height: 80%;           /* imagem ocupa ~80% */
+  height: auto;           /* imagem ocupa ~80% */
   object-fit: cover;
   border: 2px solid black;
 }
+
 
 .legenda {
   height: 10%;           /* legenda ocupa ~20% */
@@ -405,3 +411,68 @@ h2, h1{
 h4{
   text-align: justify;
 }
+
+
+.time-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.time-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid white;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.card .role {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card .description {
+  font-size: 0.95em;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  padding: 0; /* remove possíveis paddings herdados */
+}
+
